@@ -6,6 +6,7 @@ Code VARCHAR(50) UNIQUE,
 Name VARCHAR(50),
 CONSTRAINT CHK_Code_Unique CHECK (Code = ('s' + CAST(ID AS VARCHAR(10))))
 );  
+GO
 IF OBJECT_ID('dbo.Family', 'U') IS NOT NULL
 DROP TABLE dbo.Family;
 CREATE TABLE dbo.Family(
@@ -13,6 +14,7 @@ ID INT IDENTITY PRIMARY KEY,
 SurName VARCHAR(20),
 BudgetValue INT
 );
+GO
 IF OBJECT_ID('dbo.Basket', 'U') IS NOT NULL
 DROP TABLE dbo.Basket;
 CREATE TABLE dbo.Basket(
@@ -26,3 +28,4 @@ DiscoutValue INT,
 FOREIGN KEY (ID_SKU) REFERENCES dbo.SKU,
 FOREIGN KEY (ID_Family) REFERENCES dbo.Family
 );
+GO
