@@ -17,6 +17,6 @@ AS
 	END;
 	ELSE
 	BEGIN
-	PRINT 'Такой семьи нет'
+	PRINT 'there is no family like this'
 	END;
 	END;
