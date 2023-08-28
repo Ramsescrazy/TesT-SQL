@@ -24,6 +24,7 @@ WHERE
 END;
 ELSE
 	BEGIN
-		PRINT 'Такой семьи нет'
-END;
-END;
+PRINT 'there is no family like this'
+	END;
+	END;
+GO
